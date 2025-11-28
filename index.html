@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nikhil Kaushal - Senior Product Analyst</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'montserrat': ['Montserrat', 'sans-serif'],
+                        'open-sans': ['Open Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Open Sans', sans-serif; }
+        h1, h2, h3 { font-family: 'Montserrat', sans-serif; }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-900 dark:bg-gray-900 dark:text-white min-h-screen">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-md z-50 border-b border-gray-200 dark:border-gray-700">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <h1 class="text-xl font-bold font-montserrat">NK</h1>
+            <ul class="hidden md:flex space-x-6">
+                <li><a href="#about" class="hover:text-blue-600 dark:hover:text-blue-400">About</a></li>
+                <li><a href="#experience" class="hover:text-blue-600 dark:hover:text-blue-400">Experience</a></li>
+                <li><a href="#projects" class="hover:text-blue-600 dark:hover:text-blue-400">Projects</a></li>
+                <li><a href="#skills" class="hover:text-blue-600 dark:hover:text-blue-400">Skills</a></li>
+                <li><a href="#contact" class="hover:text-blue-600 dark:hover:text-blue-400">Contact</a></li>
+            </ul>
+            <button onclick="document.documentElement.classList.toggle('dark')" class="md:hidden">Toggle Dark</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800 pt-20">
+        <div class="container mx-auto px-4 text-center fade-in">
+            <div class="flex flex-col md:flex-row items-center md:space-x-8 mb-8">
+                <img src="https://via.placeholder.com/300x300/4F46E5/FFFFFF?text=Nikhil+Kaushal" alt="Nikhil Kaushal" class="w-48 h-48 md:w-64 md:h-64 rounded-full object-cover mb-6 md:mb-0 shadow-lg">
+                <div>
+                    <h1 class="text-4xl md:text-6xl font-bold font-montserrat mb-4">Nikhil Kaushal</h1>
+                    <p class="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-6">Senior Product Analyst (1.6 years in Fintech)</p>
+                    <div class="flex flex-col sm:flex-row justify-center space-y-2 sm:space-y-0 sm:space-x-6 text-sm">
+                        <a href="tel:+917876739942" class="hover:text-blue-600 dark:hover:text-blue-400">+91 7876739942</a>
+                        <a href="mailto:nikhilkaushal457@gmail.com" class="hover:text-blue-600 dark:hover:text-blue-400">nikhilkaushal457@gmail.com</a>
+                        <a href="https://linkedin.com/in/nikhil-kaushal" class="hover:text-blue-600 dark:hover:text-blue-400">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white dark:bg-gray-900">
+        <div class="container mx-auto px-4 max-w-4xl fade-in">
+            <h2 class="text-3xl font-bold font-montserrat mb-8 text-center">About Me</h2>
+            <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+                Results-oriented Senior Product Analyst with 1.6 years’ experience driving digital product delivery, translating user needs into 
+                actionable features, managing backlogs, and enabling cross-functional collaboration to support successful product roadmaps.
+            </p>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-gray-50 dark:bg-gray-800">
+        <div class="container mx-auto px-4 max-w-4xl fade-in">
+            <h2 class="text-3xl font-bold font-montserrat mb-8 text-center">Experience</h2>
+            <div class="space-y-6">
+                <div class="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold mb-2">Senior Product Analyst, Deputy Manager</h3>
+                    <p class="text-blue-600 dark:text-blue-400 mb-4">TVS Credit Services Ltd., Chennai | Jun 2024 - Present</p>
+                    <ul class="space-y-3 text-gray-700 dark:text-gray-300">
+                        <li class="flex items-start"><span class="font-bold text-blue-600 dark:text-blue-400 mr-2">•</span> Delivered digital solutions for Commercial SBU by collaborating with 10+ diverse cross-functional teams; Improved process efficiency by <span class="font-bold text-2xl text-red-600 dark:text-red-400">~20%</span> by delivering 120+ end-to-end LOS CRs across 4 Commercial portfolios.</li>
+                        <li class="flex items-start"><span class="font-bold text-blue-600 dark:text-blue-400 mr-2">•</span> Reduced tracking effort by <span class="font-bold text-2xl text-red-600 dark:text-red-400">90%</span> by automating change request tracking in JIRA, replacing manual Excel processes; Cut TAT by <span class="font-bold text-2xl text-red-600 dark:text-red-400">~10%</span> by managing backlog prioritization for 7+ stakeholders.</li>
+                        <li class="flex items-start"><span class="font-bold text-blue-600 dark:text-blue-400 mr-2">•</span> Boosted product adoption from <span class="font-bold text-2xl text-red-600 dark:text-red-400">90%</span> to <span class="font-bold text-2xl text-red-600 dark:text-red-400">99%</span> within 2 months by leading post-release user feedback loops; Generated ~36+ Cr in revenue by launching a pan India platform for 2000+ users, reducing loan disbursal TAT by <span class="font-bold text-2xl text-red-600 dark:text-red-400">66%</span>.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-white dark:bg-gray-900">
+        <div class="container mx-auto px-4 fade-in">
+            <h2 class="text-3xl font-bold font-montserrat mb-12 text-center">Projects</h2>
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Project 1: TVS Credit -->
+                <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                    <h3 class="text-xl font-bold mb-4 font-montserrat">LOS Automation at TVS Credit</h3>
+                    <p class="text-gray-700 dark:text-gray-300 mb-4">Led delivery of 120+ end-to-end change requests, automating tracking and integrations for commercial portfolios.</p>
+                    <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+                        <li><span class="font-bold">Efficiency Gain:</span> <span class="text-red-600 dark:text-red-400">20% process improvement</span></li>
+                        <li><span class="font-bold">Revenue Impact:</span> <span class="text-red-600 dark:text-red-400">~36+ Cr generated</span></li>
+                        <li><span class="font-bold">Adoption Boost:</span> <span class="text-red-600 dark:text-red-400">90% to 99%</span></li>
+                    </ul>
+                </div>
+                <!-- Project 2: Sabpaisa -->
+                <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                    <h3 class="text-xl font-bold mb-4 font-montserrat">SettlePaisa Phase-1 Ownership</h3>
+                    <p class="text-gray-700 dark:text-gray-300 mb-4">Owned product requirements, crafted PRDs/BRDs, and resolved post-deployment issues via feedback loops.</p>
+                    <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+                        <li><span class="font-bold">CR Reduction:</span> <span class="text-red-600 dark:text-red-400">~25% fewer requirements</span></li>
+                        <li><span class="font-bold">Approval Speed:</span> <span class="text-red-600 dark:text-red-400">~30% TAT cut</span></li>
+                        <li><span class="font-bold">MTTR Improvement:</span> <span class="text-red-600 dark:text-red-400">40% reduction</span></li>
+                    </ul>
+                </div>
+                <!-- Project 3: Immanent Solutions -->
+                <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                    <h3 class="text-xl font-bold mb-4 font-montserrat">Full-Stack Node.js Applications</h3>
+                    <p class="text-gray-700 dark:text-gray-300 mb-4">Developed 4 apps with 60+ APIs, optimizing performance for global client needs.</p>
+                    <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+                        <li><span class="font-bold">Response Speed:</span> <span class="text-red-600 dark:text-red-400">30% improvement</span></li>
+                        <li><span class="font-bold">Productivity Boost:</span> <span class="text-red-600 dark:text-red-400">50% developer gain</span></li>
+                        <li><span class="font-bold">APIs Delivered:</span> <span class="text-red-600 dark:text-red-400">60+</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-gray-50 dark:bg-gray-800">
+        <div class="container mx-auto px-4 max-w-4xl fade-in">
+            <h2 class="text-3xl font-bold font-montserrat mb-12 text-center">Skills</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <span class="bg-white dark:bg-gray-900 px-4 py-2 rounded-full text-center font-semibold text-sm border border-gray-200 dark:border-gray-700">Product Lifecycle Management</span>
+                <span class="bg-white dark:bg-gray-900 px-4 py-2 rounded-full text-center font-semibold text-sm border border-gray-200 dark:border-gray-700">Roadmap Planning & Scoping</span>
+                <span class="bg-white dark:bg-gray-900 px-4 py-2 rounded-full text-center font-semibold text-sm border border-gray-200 dark:border-gray-700">Product Strategy</span>
+                <span class="bg-white dark:bg-gray-900 px-4 py-2 rounded-full text-center font-semibold text-sm border border-gray-200 dark:border-gray-700">Market Research</span>
+                <span class="bg-white dark:bg-gray-900 px-4 py-2 rounded-full text-center font-semibold text-sm border border-gray-200 dark:border-gray-700">Competitive Analysis</span>
+                <span class="bg-white dark:bg-gray-900 px-4 py-2 rounded-full text-center font-semibold text-sm border border-gray-200 dark:border-gray-700">Agile & Scrum</span>
+                <span class="bg-white dark:bg-gray-900 px-4 py-2 rounded-full text-center font-semibold text-sm border border-gray-200 dark:border-gray-700">Prompt Engineering</span>
+                <span class="bg-white dark:bg-gray-900 px-4 py-2 rounded-full text-center font-semibold text-sm border border-gray-200 dark:border-gray-700">AI Assistants</span>
+                <span class="bg-white dark:bg-gray-900 px-4 py-2 rounded-full text-center font-semibold text-sm border border-gray-200 dark:border-gray-700">KPI & OKR Tracking</span>
+                <span class="bg-white dark:bg-gray-900 px-4 py-2 rounded-full text-center font-semibold text-sm border border-gray-200 dark:border-gray-700">User Story Writing</span>
+                <span class="bg-white dark:bg-gray-900 px-4 py-2 rounded-full text-center font-semibold text-sm border border-gray-200 dark:border-gray-700">Backlog Management</span>
+                <span class="bg-white dark:bg-gray-900 px-4 py-2 rounded-full text-center font-semibold text-sm border border-gray-200 dark:border-gray-700">Go-to-Market Strategy</span>
+                <span class="bg-white dark:bg-gray-900 px-4 py-2 rounded-full text-center font-semibold text-sm border border-gray-200 dark:border-gray-700">Wireframing & Prototyping</span>
+                <span class="bg-white dark:bg-gray-900 px-4 py-2 rounded-full text-center font-semibold text-sm border border-gray-200 dark:border-gray-700">A/B Testing</span>
+                <span class="bg-white dark:bg-gray-900 px-4 py-2 rounded-full text-center font-semibold text-sm border border-gray-200 dark:border-gray-700">APIs</span>
+                <span class="bg-white dark:bg-gray-900 px-4 py-2 rounded-full text-center font-semibold text-sm border border-gray-200 dark:border-gray-700">Stakeholder Management</span>
+                <span class="bg-white dark:bg-gray-900 px-4 py-2 rounded-full text-center font-semibold text-sm border border-gray-200 dark:border-gray-700">JIRA</span>
+                <span class="bg-white dark:bg-gray-900 px-4 py-2 rounded-full text-center font-semibold text-sm border border-gray-200 dark:border-gray-700">Confluence</span>
+                <span class="bg-white dark:bg-gray-900 px-4 py-2 rounded-full text-center font-semibold text-sm border border-gray-200 dark:border-gray-700">Figma</span>
+                <span class="bg-white dark:bg-gray-900 px-4 py-2 rounded-full text-center font-semibold text-sm border border-gray-200 dark:border-gray-700">MS Office</span>
+                <span class="bg-white dark:bg-gray-900 px-4 py-2 rounded-full text-center font-semibold text-sm border border-gray-200 dark:border-gray-700">Basic Tableau</span>
+                <span class="bg-white dark:bg-gray-900 px-4 py-2 rounded-full text-center font-semibold text-sm border border-gray-200 dark:border-gray-700">LLMs</span>
+                <span class="bg-white dark:bg-gray-900 px-4 py-2 rounded-full text-center font-semibold text-sm border border-gray-200 dark:border-gray-700">Loan Origination System (LOS)</span>
+                <span class="bg-white dark:bg-gray-900 px-4 py-2 rounded-full text-center font-semibold text-sm border border-gray-200 dark:border-gray-700">Release Planning</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white dark:bg-gray-900">
+        <div class="container mx-auto px-4 max-w-2xl fade-in">
+            <h2 class="text-3xl font-bold font-montserrat mb-8 text-center">Get In Touch</h2>
+            <form action="https://formspree.io/f/your-form-id" method="POST" class="space-y-6"> <!-- Replace 'your-form-id' with your Formspree endpoint after signing up with myemail@gmail.com -->
+                <div>
+                    <label for="name" class="block text-sm font-semibold mb-2">Name</label>
+                    <input type="text" id="name" name="name" required class="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white">
+                </div>
+                <div>
+                    <label for="email" class="block text-sm font-semibold mb-2">Email</label>
+                    <input type="email" id="email" name="email" required class="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white">
+                </div>
+                <div>
+                    <label for="message" class="block text-sm font-semibold mb-2">Message</label>
+                    <textarea id="message" name="message" rows="5" required class="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-md transition-colors">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-6 text-center">
+        <p>&copy; 2025 Nikhil Kaushal. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Smooth scroll for nav links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
