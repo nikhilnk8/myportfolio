@@ -36,8 +36,8 @@
 </head>
 <body class="bg-white text-gray-900 dark:bg-gray-900 dark:text-white min-h-screen">
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-md z-50 border-b border-gray-200 dark:border-gray-700">
-        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+    <nav class="fixed top-0 w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-md z-50 border-b border-gray-200 dark:border-gray-700 px-4">
+        <div class="container mx-auto py-4 flex justify-between items-center">
             <h1 class="text-xl font-bold font-montserrat">NK</h1>
             <ul class="hidden md:flex space-x-6">
                 <li><a href="#about" class="hover:text-blue-600 dark:hover:text-blue-400">About</a></li>
@@ -46,7 +46,20 @@
                 <li><a href="#skills" class="hover:text-blue-600 dark:hover:text-blue-400">Skills</a></li>
                 <li><a href="#contact" class="hover:text-blue-600 dark:hover:text-blue-400">Contact</a></li>
             </ul>
-            <button onclick="document.documentElement.classList.toggle('dark')" class="md:hidden">Toggle Dark</button>
+            <div class="flex items-center space-x-4">
+                <button id="dark-toggle" class="p-2 rounded-md bg-gray-200 dark:bg-gray-700">🌙</button>
+                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-md bg-gray-200 dark:bg-gray-700">☰</button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700">
+            <ul class="py-4 space-y-2 px-4">
+                <li><a href="#about" class="block py-2 hover:text-blue-600 dark:hover:text-blue-400">About</a></li>
+                <li><a href="#experience" class="block py-2 hover:text-blue-600 dark:hover:text-blue-400">Experience</a></li>
+                <li><a href="#projects" class="block py-2 hover:text-blue-600 dark:hover:text-blue-400">Projects</a></li>
+                <li><a href="#skills" class="block py-2 hover:text-blue-600 dark:hover:text-blue-400">Skills</a></li>
+                <li><a href="#contact" class="block py-2 hover:text-blue-600 dark:hover:text-blue-400">Contact</a></li>
+            </ul>
         </div>
     </nav>
 
@@ -270,6 +283,32 @@
     </footer>
 
     <script>
+        // Dark mode toggle with localStorage
+        const darkToggle = document.getElementById('dark-toggle');
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+            darkToggle.textContent = '☀️';
+        } else {
+            darkToggle.textContent = '🌙';
+        }
+        darkToggle.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark');
+            if (document.documentElement.classList.contains('dark')) {
+                localStorage.theme = 'dark';
+                darkToggle.textContent = '☀️';
+            } else {
+                localStorage.theme = 'light';
+                darkToggle.textContent = '🌙';
+            }
+        });
+
+        // Mobile menu toggle
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
         // Smooth scroll for nav links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -285,7 +324,6 @@
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
         };
-
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -293,7 +331,6 @@
                 }
             });
         }, observerOptions);
-
         document.querySelectorAll('.fade-in').forEach(el => {
             observer.observe(el);
         });
